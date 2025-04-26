@@ -1,0 +1,353 @@
+# The goal of plans is to STAY ORGANISED!!!
+# This file will be separated in sections. Sections include;
+# TYPING (line 5) ABILITIES (line 40) DUNGEON LAYOUT (line --) STORY (line --) ITEMS/EFFECTS (line--) TO DO LIST (end)
+
+# TYPES - an explanation on the types and how they interact.
+
+# types include; FIRE, WATER, HOLY, UNDEAD, DARK, LIFE (kinda like grass), TRICKSTER, BOSS,
+# ELITE (plus one of the other types except boss), NORMAL (none)
+
+# NOTE: AT ANY POINT IN DEVELOPMENT, THESE NUMBERS CAN BE CHANGED
+
+# Weaknesses - showing each types weakness
+# FIRE - (weak to) WATER (5% bonus dmg)
+# WATER - LIFE (5% bonus dmg)
+# HOLY - DARK/TRICKSTER (DARK - 20% bonus dmg + auto wither, TRICKSTER - target unable to dodge)
+# UNDEAD - HOLY/LIFE/FIRE (HOLY - 25% bonus dmg + auto wither, LIFE - 5% bonus dmg, FIRE - 25% bonus dmg + auto burn)
+# DARK - HOLY/TRICKSTER (HOLY - 20% bonus dmg + auto wither, TRICKSTER - target unable to dodge)
+# LIFE - DARK/UNDEAD/FIRE/TRICKSTER (DARK - 30% bonus dmg + auto wither, UNDEAD - 5% bonus dmg + auto poison + leech
+#        (continued) FIRE - 10% bonus dmg + auto burn, TRICKSTER - target unable to dodge)
+# TRICKSTER - none
+# BOSS - none (any weakness from a type on a BOSS is reduced by half, not including weakness to TRICKSTER)
+# ELITE - none (any weakness from a type on an ELITE is reduced by 10%, not including weakness to TRICKSTER)
+# NORMAL - TRICKSTER (unable to dodge)
+
+# Resistances - showing each types resistance NOTE: resistance is applied before defense. When applied, dmg cannot fall
+# below 3
+# FIRE - (resistant to) LIFE/UNDEAD/NORMAL (LIFE - 5% less dmg (received), UNDEAD - 5% less dmg, NORMAL - 5% less dmg)
+# WATER - FIRE/HOLY (FIRE - 20% less dmg, HOLY - 5% less dmg)
+# HOLY - LIFE/WATER (LIFE - 10% less dmg, WATER - 5% less dmg)
+# UNDEAD - none
+# DARK - UNDEAD/FIRE (UNDEAD - 15% less dmg, FIRE - 20% less dmg)
+# LIFE - HOLY (5% less dmg)
+# TRICKSTER - BOSS/ELITE/NORMAL (dmg is halved)
+# BOSS - ALL (stated before, weakness reduced by half, not including TRICKSTER)
+# ELITE - ALL (stated before, weakness reduced by 10%, not including TRICKSTER)
+# NORMAL - none
+
+# /////END OF TYPES////
+
+# ABILITIES - an explanation on what they do, and types that can negate affects
+
+# WILLPOWER - increases attack based on how much. 5% less dmg when WILLPOWER is 0. DODGE CHANCE is reduced by 10% when 0
+# If WILLPOWER is greater than 30, 15% more dmg, ability to go through dark patches.
+
+# !!!HARMFUL ABILITIES!!!
+# ///STATUS EFFECTS///
+# POISON - Ignores WILLPOWER and deals 3 dmg per turn on F1. Scales depending what flor the player is on.
+# Immune - DARK/BOSS
+# Resistance - ELITE/UNDEAD (dmg reduced by half)
+# Weakness - LIFE (double dmg)
+# lasts 3 turns
+# Usable by - LIFE/UNDEAD/BOSS/DARK/NORMAL
+# CANNOT KILL
+
+# WITHER - The more WILLPOWER, the less dmg. With 0 WILLPOWER, deals 5 dpt (dmg per turn). Does scale.
+# If WILLPOWER ABOVE 0, -1 WILLPOWER per turn. If WILLPOWER reaches 0 (if not already) deals an additional 10 dmg (once)
+# If WILLPOWER is greater than 30, no dmg is taken. WILLPOWER will still be taken.
+# Immune - none
+# Resistance - HOLY/DARK (WILLPOWER cannot fall below 3 from WITHER)
+# Weakness - LIFE/NORMAL (+1 dmg per turn, resets when WITHER is removed.)
+# lasts 10 turns
+# Usable by - HOLY(against DARK or UNDEAD only)/DARK(against HOLY or LIFE only)/TRICKSTER
+# CAN KILL
+
+# BURN - Ignores WILLPOWER and deals n+1 dpt. starts at 1. Can be put out by using items or running.
+# If using physical attacks, chance to apply burn to target.
+# Immune - WATER
+# Resistance - DARK (dmg cap 3)
+# Weakness - LIFE/UNDEAD (n+2 dpt)
+# Lasts (Floor * 2) turns. can be negated by FROSTBITE
+# Usable by - ALL (magic ability)/FIRE (by normal attacks)
+# CANNOT KILL
+
+# WEAKEN - reduces total attack power/reduces defense by 10% each.
+# Immune - none
+# Resistance - none
+# Weakness - none
+# Lasts 2 turns
+# Usable by - ALL (magic ability)
+# CANNOT KILL
+
+# FROSTBITE - reduces total attack power/defense by 10% each. 5% chance to skip turn
+# Immune - none
+# Resistance - DARK
+# Weakness - FIRE/WATER/LIFE/UNDEAD/NORMAL (n+1 dmg, +5% chance to skip turn every turn)
+# lasts 5 turns - can be negated by BURN
+# CAN KILL
+
+# FREEZE - 5 dmg, skips turn
+# lasts 1 turn
+# CANNOT KILL
+
+# GRACED BY THE GODS - Both harmful and helpful. IF type not DARK or UNDEAD, WILLPOWER +5, ELSE n+1 dpt (starts at 2)
+# BONUS - HOLY/LIFE
+# Resistance - BOSS/ELITE (dpt maxes at 7 dmg for DARK/UNDEAD type ELITEs or BOSSes)
+# Weakness - DARK/UNDEAD
+# Lasts 15 turns for DARK/UNDEAD, else one time effect
+# CANNOT KILL
+
+# CURSE OF DARKNESS - Both harmful and helpful. IF type DARK or UNDEAD, +(total dmg/2) and +5 defense. ELSE n+1 dpt
+# (starts at 2)
+# BONUS - DARK/UNDEAD
+# Resistance - BOSS/ELITE (If type NORMAL, chance to change type to DARK and get the bonus instead.)
+# Weakness - HOLY/LIFE (n+2 dpt)
+# Lasts 15 turns
+# CANNOT KILL
+
+# Both GRACED BY THE GODS and CURSE OF DARKNESS effects can be canceled out by each other.
+
+# BREATH OF THE ABYSS - n+3 atk, n+3 dmg (starts at 1)
+# Continuously adds temp atk, but also dmg. Can only be negated by HOLY PRAYER/PURIFY/GOD TEARS at a 50% chance
+# Resistance - DARK/UNDEAD (only n+1 dmg)
+# Weakness - HOLY/LIFE/NORMAL (n+n dmg)
+# Lasts the battle
+# CAN KILL
+
+# BREATH OF THE ABYSS WILL cancel out GRACED BY THE GODS
+
+# ///ABILITIES///
+# HOLY PRAYER - 30% chance to apply GRACED BY THE GODS to the target. 75% chance when the target is DARK/UNDEAD
+# If cast on self, heals 5. If cast on enemy, 15% chance to weaken, 0% to apply GRACED BY THE GODS unless DARK/UNDEAD
+# +12 WILLPOWER if caster is HOLY
+
+# DEMONIC CIRCLE - 30% chance to apply CURSE OF DARKNESS to ALL. 75% chance if the opponents type is HOLY/LIFE
+# 5% chance to apply BREATH OF THE ABYSS to ALL. +12 WILLPOWER if caster is DARK
+
+# FIREBALL - 5 dmg, 50% chance to apply burn, -2 WILLPOWER
+
+# POISON RAIN - 25% chance to apply POISON,  -3 WILLPOWER
+
+# ICE BLAST - 5 dmg, 30% chance to apply freeze  -4 WILLPOWER
+
+# FIRE STORM - 20 dmg, 95% chance to apply burn, -15 WILLPOWER
+
+# TOXIC SLUDGE - 5 dmg, -5 defense, 65% chance to apply POISON, -15 WILLPOWER
+
+# AVALANCHE - 25 dmg, 40% chance to apply FREEZE, 15% chance to apply FROSTBITE, (if FREEZE applied, FROSTBITE CANNOT be
+# applied and vice versa) -20 WILLPOWER
+
+# MAGIC ARROW 3+base dmg, -3 WILLPOWER
+
+# INTIMIDATE - -3 to targets WILLPOWER
+
+# !!!NON-HARMFUL ABILITIES!!!
+# STRENGTHEN - increases dmg by 10% of total dmg.
+# Lasts 3 turns, CAN STACK
+
+# BULK - increases defense by 1.
+# Lasts for the battle, CAN STACK but maxes out at 15 extra defense points
+
+# HOLY FANFARE - usable by HOLY only, +15 WILLPOWER
+
+# PSYKE UP - +3 WILLPOWER
+
+# BARRIER - +4 defense points, -4 WILLPOWER (lasts one turn)
+
+# EVASIVE MANEUVERS - +20% DODGE CHANCE for one turn, -5 WILLPOWER
+
+# ////DUNGEON PLAN/GUIDE/ENEMY GUIDE////
+
+# The Dungeon has multiple floors, each with their own typing. The deeper you go into the dungeon, the more ferocious
+# the enemies.
+
+# Each floor has different rooms. Rooms - FIGHT/STORY/TREASURE/SHOP/BLESSING/TRAP/SPLIT
+
+# FIGHT - 100% to start a fight with a monster.
+
+# STORY - learn more about the world by writings on the walls, or npc.
+# It's up to the player to determine if the npc is trustworthy or not. Some npcs will betray the player, stealing items,
+# or dealing damage. Others can give you useful items. By paying attention to the way they talk, (and if I'm a good
+# enough writer), It should be easy for the player to discern who they should trust.
+
+# SHOP - Wandering Traders will "randomly" appear throughout the dungeon. Some will scam the player, (they won't know on
+# the first run though) and others will give you a steal of a deal! \;D EXAMPLE of interaction;
+
+# ---
+# PLAYER comes across a Wandering Trader.
+
+# Talk? (y/n)
+
+# ---PLAYER ENTER---y
+
+# "Need something?"
+
+# [BUY]   [SELL]
+# [LEAVE]
+
+# ---PLAYER ENTER---sell
+
+# Health Potion (s) - GOLD: 10 [1]
+
+# Bandage - GOLD: 2 [2]
+
+# Demon's Blood - GOLD: 150 [3]
+
+# Please enter a number, or enter back to exit.
+
+# ---PLAYER ENTER---3
+
+# PLAYER received 150 gold!
+
+# "Need something?"
+
+# [BUY]   [SELL]
+# [LEAVE]
+
+# ---PLAYER ENTER---buy
+
+# "Take your time."
+# [GOLD: 230]
+
+# Health potion (s) - GOLD: 13 - STOCK: 5 [1]
+
+# Scroll of strength - GOLD: 50 - STOCK: 1 [2]
+
+# Monster repellent - GOLD: 34 - STOCK: 2 [3]
+
+# Please enter a number, or enter back to exit.
+
+# ---PLAYER ENTER---2
+
+# How many?
+
+# ---PLAYER ENTER---1
+
+# Purchased Scroll of strength! -50 gold
+
+# "Need anything else?"
+# [GOLD: 180]
+
+# Health potion (s) - GOLD: 13 - STOCK: 5 [1]
+
+# Scroll of strength - GOLD: 50 - OUT OF STOCK [2]
+
+# Monster repellent - GOLD: 34 - STOCK: 2 [3]
+
+# Please enter a number, or enter back to exit.
+
+# ---PLAYER ENTER---back
+
+# "Need something?"
+
+# [BUY]   [SELL]
+# [LEAVE]
+
+# ---PLAYER ENTER---leave
+
+# "Take care."
+# ---
+
+# !!!TUTORIAL!!! (F0)
+# -story intro, teaching how to fight, first item (choose from; wooden sword/bow/wooden shield/rusty dagger/magic stick)
+# wooden sword - PATH OF THE KNIGHT (+1 base damage / +1 stat point per level up)
+# bow - PATH OF THE ARCHER (chance to gain an extra turn / chance increases with level)
+# wooden shield - PATH OF THE PALADIN (HOLY type on start, +7 WILLPOWER / WILLPOWER NEVER falls bellow 5)
+# rusty dagger - PATH OF THE ASSASSIN (DARK type on start, +20% dodge chance, WILLPOWER CAN GO INTO NEGATIVES / -15)
+# magic stick - PATH OF THE MAGICIAN (+30 MANA, WILLPOWER is not subtracted when casting spells)
+
+# Enemies -
+# ///TRAINING DUMMY (HEALTH; 20, ATTACK; 5, WILLPOWER; 0, MANA; 0, DODGE CHANCE; 0%, DEFENSE; 0)///
+# ///SLIME (s) (HEALTH; 5, ATTACK; 2, WILLPOWER; 5, MANA; 0, DODGE CHANCE; 15%, DEFENSE; 2)///
+
+# items dropped - health potion (s)
+
+# Learned -
+
+# FIGHT MENU -
+# [FIGHT]   [ACTION]
+# [ITEM]    [SPELLS]
+
+# ///FIGHT - Basic attacks, Attacks that do not need MANA. COMBAT EXAMPLE;
+# ---
+# PLAYER used SLASH! [-1 WILLPOWER]
+
+# TRAINING DUMMY took 3 damage!
+
+# TRAINING DUMMY: [/////////////////---]
+
+# PLAYER: [////////////////////]
+# ---FIGHT MENU GOES AFTER HEALTH BARS///
+
+# ///ACTION -
+# [INFO]   [SPARE]
+#      [RUN]
+
+# INFO - Information about the enemy (typing, current health, WILLPOWER)
+
+# SPARE - This action will only become available if the opponents WILLPOWER is below 1. DARK/UNDEAD do not give this
+# option
+
+# RUN - This action is only available if the player's WILLPOWER is above 5///
+
+# ///ITEM - opens the item menu for use. EXAMPLE;
+# ---
+# Item1 - HEALS -> +10 [1]
+
+# Item2 - DEFENSE -> +2 [2]
+
+# Please enter a number to use an item, or enter back to exit.
+# ---///
+
+# ///SPELLS - abilities that consume MANA. EXAMPLE;
+# ---
+# [MANA: 30] [WILLPOWER: 45]
+# (NOTE: cost orders [COST: MANA, WILLPOWER], PATH OF THE MAGICIAN does not use WILLPOWER)
+
+# Spell1 - COST: 2, 4 [1]
+
+# Spell2 - COST: 7, 7 [2]
+
+# Please enter a number to cast a spell, or back to exit.
+# ---///
+
+# !!!TOWER ENTRANCE!!! (F1)
+
+# Enemies -
+# ///GOBLIN (ARCHER) - ()
+# ///GOBLIN (WARRIOR) - ()
+# ///SLIME (s) - ()
+# ///SLIME (m) - ()
+# ///SLIME (L) - ()
+# ///HOBGOBLIN [ELITE] - ()
+# ///GELATINOUS CUBE (XL) [ELITE] - ()
+
+# ///////////////NEED TO DO/////////////////
+# TO DO LIST
+
+# finish basic enemy class
+# -Add WILLPOWER/MANA
+# -Add ABILITIES
+# -Add typing that can affect damage
+
+# add player class
+# -setup inventory
+
+# setup practice fight
+# -tutorial enemy (name: practice dummy)
+# -Add ability to skip tutorial
+
+# plan out F1 of dungeon
+# -make the different rooms (treasure, trap, fight, rest, split, store, look around room (or something))
+
+# add F1 enemies
+# -should be at LEAST 3 different enemies
+
+# Create game loop
+# -enemy spawner
+# -fight loop
+
+# Add items
+# -basic buffs (don't add weapon-type items yet)
+
+# Add inventory/ability to use items

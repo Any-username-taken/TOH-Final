@@ -1,0 +1,27 @@
+Name
+Kills
+Completed?
+
+Slime [s]
+10
+False
+
+Slime [m]
+7
+False
+
+Gelatinous Cube [l]
+5
+False
+
+Gelatinous Cube [XL]
+2
+False
+
+Goblin Magician
+1
+False
+
+Goblin
+7
+False

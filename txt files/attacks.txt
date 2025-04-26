@@ -1,0 +1,93 @@
+IMPORTANT!!!
+ATK go like:
+NAME
+DAMAGE/WILL-MANA (subtraction)/ABILITY
+///Physical attacks///
+slash
+4/3-0/bleed-2-3
+
+stab
+3-6/5-0/bleed-2-3
+
+bash
+3/1-0/none
+
+smash
+4-6/1-0/none
+
+shield throw
+4/5-0/none
+
+shove
+2/1-0/none
+
+wiggle
+1/1-0/none
+
+shred
+5-8/6-0/none
+
+dismember
+7/10-0/bleed-2-3
+
+lunge
+4/3-0/none
+
+bite
+1/0-0/wither-10-5
+
+backstab
+5/7-0/bleed-2-4/E-15
+
+quick stab
+1/1-0/bleed-5-4/M-2
+
+arrow
+3/1-0/none
+
+quick draw
+1/7-0/none/M-5
+
+///Non-physical?///
+acid spit
+2/1-0/poison-4-5
+
+berserk
+0/10-0/strengthen/S
+
+poison mist
+0/2-3/poison-5-3
+
+swallow
+10/1-0/none
+
+///Magic attacks///
+meditate
+0/0-0/regenerate/w+
+
+arcane blast
+4/0-5/none
+
+fireball
+4/0-5/burn-1-5
+
+fireball++
+80/50-100/burn-1-5
+
+healing aura
+0/0-10/heal
+
+holy circle
+0/10-5/graced by the gods/S
+
+bleed [s]
+10/0-25/bleed-1-7
+
+deadly curse
+1/0-0/breath of the abyss-7-5
+
+shadow step
+2/0-10/none/M-5
+
+flaming arrow
+6/0-10/burn-1-5

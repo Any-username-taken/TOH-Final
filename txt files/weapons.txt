@@ -1,0 +1,13 @@
+///Melee weapons///
+-Starters-
+wooden sword
+slash-bash-stab
+
+wooden shield
+bash-shove-shield throw-berserk
+
+rusty dagger
+slash-stab-backstab-quick stab
+
+bow
+arrow-quick draw

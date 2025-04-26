@@ -1,0 +1,86 @@
+Health Potion [s]
+Your small cuts start to close.
+H-15-W+-5-E
+5 <- gold cost (remove later)
+
+Health Potion [m]
+Your deep wounds start healing.
+H-25-W+-10-E
+7
+
+Health Potion [l]
+You feel a great surge of energy as your wounds start to heal!
+H-35-W+-10-E
+10
+
+Health Potion [XL]
+A wave of healing flows through even your bones as all injuries dissipate!
+H-75-W+-25-A-def UP-E
+50
+
+Mana Potion [s]
+You feel the energy surrounding you start to swirl!
+M-25-E
+
+Regen Potion [s]
+You feel your pain slowly subsiding!
+A-regen-10-W+-10-E
+
+Antidote
+You feel it's healing power!
+R-poison-H-15-E
+15
+
+Suspicious Stew [p]
+I don't think this will be good...
+|-H-5-A-poison-3-E
+2
+
+Suspicious Stew [r++]
+I don't think this will be good...
+A-strengthen-4-|-D-5-H-2-A-poison-5-A-def UP-3-E
+0
+
+Sturdy Potion [s]
+Your skin gets tougher!
+A-def UP-5-E
+15
+
+Sturdy Potion [m]
+Your bones become more dense!
+A-def UP-10-E
+25
+
+Strength Potion [s]
+You feel empowered!
+A-strengthen-5-E
+5
+
+Strength Potion [m]
+A rush of power flows through you!
+H-3-A-strengthen II-5-E
+15
+
+Strength Potion [l]
+You feel extremely powerful!
+A-strengthen III-5-P-D-2-E
+45
+
+Tome of Strength
+Your attack was permanently increased by 5!
+P-D-5-E
+10
+
+Tome of Vitality
+Your max health was permanently increased by 15!
+P-H-15-E
+10
+
+Enchiridion of Forbidden Power
+Using black magic, you permanently increased your damage by 15!
+P-D-15-E
+100
+
+Fireball Manual
+P-S-fireball-E
+50

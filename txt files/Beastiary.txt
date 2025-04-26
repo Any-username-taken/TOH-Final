@@ -1,0 +1,34 @@
+Name
+Description
+E(dmg mult)/D(def buff)/none(no buffs)
+
+|
+//SLIMES//
+
+Slime [s]
+A small slime born from congealed mana.~Currently, in a small, weak state.~If allowed to gather more mana, it will grow in size.~Adapts to the environment it lives in, potentially changing its type.
+E-1.5
+
+Slime [m]
+A medium slime that absorbed large mana pools and developed a mana core.~Developed a slightly acidic body~It's weak spot is the core itself.
+E-2.5
+
+Gelatinous Cube [l]
+A slime that mutated to specifically hunt living creatures.~It can be seen even hunting its own kind.~Best to keep your distance to not be swallowed.
+D-5
+
+Gelatinous Cube [XL]
+Created when two Gelatinous Cubes merge.~Has no weaknesses, due to it simply being too large.~Luckily, these were originally regular slimes.~I can only imagine if it was from somewhere like the 5th floor...
+none
+
+Fire Slime [s]
+Born due to congealed mana, this slime happened to come into existence around the 5th floor.~Because of the fire and lava found around its birthplace, its body turned into fire.~Remember to duck and roll.
+D-7
+
+//TYPE2//
+ELITE
+Anything with ELITE status is a stronger version of the original due to special conditions or just being a superior version.~Be careful around ELITES, as they are known to pack a punch!
+D-3
+
+BOSS
+Guardians of the next floor's entrance, they aim to stop any intruders from advancing to higher floors.~They command

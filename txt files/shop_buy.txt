@@ -1,0 +1,39 @@
+Shop items dictate what the player can and cant buy. It also keeps track of how much they bought and other things.
+Class specific items will also be available to the player. They will also be able to go back floors to enter a shop.
+|
+2
+KNIGHT
+iron sword-35-1
+E
+PALADIN
+sturdy shield-50-1
+E
+ASSASSIN
+throwing dagger-25-1
+E
+ARCHER
+compound bow-70-1
+E
+MAGE
+magite staff-47-1
+E
+Fireball Manual-100-1
+Health Potion [s]-15-25
+Strength Potion [s]-20-25
+Mana Potion [s]-25-25
+|
+4
+PALADIN
+defenders shield-56-1
+E
+ARCHER
+mechanical crossbow-78-1
+E
+MAGE
+amber staff-92-1
+E
+Health Potion [s]-25-7
+Strength Potion [l]-87-1
+Enchiridion of Forbidden Power-150-1
+Tome of Strength-65-2
+Tome of Vitality-52-1
