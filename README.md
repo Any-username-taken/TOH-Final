@@ -14,7 +14,9 @@ It is recommended to review tutorial before begining the game.
 
 You will be able to move through rooms to fight enemies!
 You will be marked with a * on the map
+
 [ ]-[ ]-[*]-[ ]
+
   Player ^
 
 You can move around the map with WASD.
