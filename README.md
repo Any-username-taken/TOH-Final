@@ -30,12 +30,16 @@ FIGHTS:
 Battles will look similar to this:
 
 Enemy (normal)
+
 [//////]
 
 
 KNIGHT Player (normal)
+
 [///////////]
+
 [FIGHT]    [ACTION]
+
 [ITEM]     [SPELLS]
 
 -The player can choose any option by either typing out the full name of the action, or the first letter.
