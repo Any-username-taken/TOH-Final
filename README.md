@@ -44,10 +44,13 @@ Ex:
 
 >f
 Enter the number of the attack or back to exit.
+
 Will: 100
 
 slash Atk: 4 Cost: 3 [1]
+
 bash Atk: 3 Cost: 1 [2]
+
 stab Atk: 3-6 Cost: 5 [3]
 
 -If they choose fight, the text above will appear.
@@ -63,6 +66,7 @@ The player can enter one of two things here, either the Index of an attack, or b
 Entering back does not loose a turn.
 
 [FIGHT]    [ACTION]
+
 [ITEM]     [SPELLS]
 
 >s
@@ -70,12 +74,15 @@ Entering back does not loose a turn.
 -Spells work the same way as regular moves, except using mana instead of will, and having the ability to learn new spells from items
 
 [FIGHT]    [ACTION]
+
 [ITEM]     [SPELLS]
 
 >a
 
 -Choosing action will send them to a different screen.
+
 [INFO]    [RUN]
+
 [BACK]    [DEFEND]
 
 -INFO:
@@ -91,6 +98,7 @@ Entering back does not loose a turn.
 -Adds defense to player. Currently in a 'broken' state. Choosing this option results nothing, except the player's turn being wasted
 
 [FIGHT]    [ACTION]
+
 [ITEM]     [SPELLS]
 
 >i
@@ -112,7 +120,9 @@ Please enter the number of the item or back to exit.
 
 New:
 Please enter the number of the item or back to exit.
+
 [1] Health Potion [s] 4x
+
 [2] Strength Potion [s] 1x
 
 -Note: List starts from 1 instead of 0
