@@ -611,7 +611,7 @@ class Player(Monster):
                         time.sleep(1)
 
                         for i in range(repeat):
-                            if target.health > 0:
+                            if target.h > 0:
                                 if "-" in items[int(attack) - 1].split("/")[0]:
                                     self.temp_dmg = items[int(attack) - 1].split("/")[0]
                                     self.temp_dmg = int(random.choice(self.temp_dmg.split("-")))
