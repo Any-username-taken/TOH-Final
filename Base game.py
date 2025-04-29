@@ -4,7 +4,6 @@ import random
 import time
 from Classes import *
 from init_fights import *
-import GAME_BUILDER
 
 
 def get_time(start, text):
